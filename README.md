@@ -1,1 +1,1 @@
-I do things with strings
+I do things with strings, and regexs
