@@ -41,7 +41,7 @@ class StripRegex(object):
             self.__Regex = RegexString
             self.__RegexObj = re.compile(RegexString, flags=self.__RegexFlags)
 
-        elif type(RegexString) is re._pattern_type:
+        elif type(RegexString) is re.Pattern:
             self.__Regex = RegexString.pattern
             self.__RegexObj = RegexString
 
