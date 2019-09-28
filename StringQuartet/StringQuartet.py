@@ -1,4 +1,8 @@
+import sys
 import re
+
+if sys.version_info >= (3, 7, 0):
+    re._pattern_type = re.Pattern
 
 
 ## class to strip a string of each occurance of the supplied regular expression
@@ -42,7 +46,7 @@ class StripRegex:
             self.__Regex = RegexString
             self.__RegexObj = re.compile(RegexString, flags=self.__RegexFlags)
 
-        elif type(RegexString) is re.Pattern:
+        elif type(RegexString) is re._pattern_type:
             self.__Regex = RegexString.pattern
             self.__RegexObj = RegexString
 
